@@ -10,9 +10,7 @@ RUN python3 -m pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY . .
 
-#CMD ["panel", "serve", "/code/gradient_descent", "--address", "0.0.0.0", "--port", "80",  "--allow-websocket-origin", "*"]
-
-CMD ["python3", "-m", "pip", "freeze"]
+CMD ["panel", "serve", "/code/gradient_descent", "--address", "0.0.0.0", "--port", "80",  "--allow-websocket-origin", "*"]
 
 RUN mkdir /.cache
 RUN chmod 777 /.cache
